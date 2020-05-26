@@ -128,7 +128,8 @@ order by neprijatelj.haljina desc;
 select decko.vesta, decko.asocijalno
 from decko left join decko_zarucnica on decko.sifra = decko_zarucnica.decko
 where decko_zarucnica.decko is null;
-
+select * from decko;
+select * from decko_zarucnica;
 #22:49-23:18
 #29 min.
 
