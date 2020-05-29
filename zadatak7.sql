@@ -74,16 +74,35 @@ alter table sestra add foreign key (prijateljica) references prijateljica(sifra)
 alter table punica add foreign key (cura) references cura(sifra);
 
 #1. U tablice prijateljica, ostavljen i zarucnik_mladic unesite po 3 retka. (7) 
- 
-#2. U tablici punica postavite svim zapisima kolonu eura na vrijednost 15,77. (4) 
- 
+insert into mladic (lipa,narukvica,drugiputa) values
+(12.5,1,'2020-12-12');
+insert into zarucnik (asocijalno,narukvica,novcica) values
+(1,1,12.5);
+insert into zarucnik_mladic (zarucnik,mladic) values
+(1,1),(1,1),(1,1);
+insert into ostavljen (introvertno,kratkamajica,prstena,zarucnik) values
+(1,'smeda',1,1),(1,'smeda',1,1),(1,'smeda',1,1);
+insert into prijateljica (gustoca,ostavljen) values
+(12.5,1),(12.5,1),(12.5,1);
+#2. U tablici punica postavite svim zapisima kolonu eura na vrijednost 15,77. (4)
+update punica set eura = 15.77;
 #3. U tablici sestra obrišite sve zapise čija je vrijednost kolone hlace manje od AB. (4) 
- 
+delete from sestra where hlace != '%AB%';
 #4. Izlistajte kratkamajica iz tablice ostavljen uz uvjet da vrijednost kolone introvertno nepoznate. (6) 
- 
+select kratkamajica from ostavljen where introvertno=null; 
 #5. Prikažite narukvica iz tablice mladic, stilfrizura iz tablice sestra te gustoca iz tablice prijateljica 
 #uz uvjet da su vrijednosti kolone introvertno iz tablice ostavljen poznate te da su vrijednosti kolone 
 #asocijalno iz tablice zarucnik poznate. Podatke posložite po gustoca iz tablice prijateljica silazno. (10) 
- 
+select mladic.narukvica, sestra.stilfrizura,prijateljica.gustoca
+from zarucnik_mladic inner join mladic on zarucnik_mladic.mladic = mladic.sifra
+inner join zarucnik on zarucnik_mladic.zarucnik =zarucnik.sifra
+inner join ostavljen on ostavljen.zarucnik = zarucnik.sifra
+inner join prijateljica on prijateljica.ostavljen = ostavljen.sifra
+inner join sestra on sestra.prijateljica = prijateljica.sifra
+where ostavljen.introvertno != null and zarucnik.asocijalno != null
+order by prijateljica.gustoca desc;
 #6. Prikažite kolone asocijalno i modelnaocala iz tablice zarucnik čiji se primarni ključ ne nalaze u tablici zarucnik_mladic. (5)
+select zarucnik.modelnaocala,zarucnik.asocijalno
+from zarucnik left join zarucnik_mladic on zarucnik_mladic.zarucnik = zarucnik.sifra
+where zarucnik_mladic.zarucnik = null;
 
