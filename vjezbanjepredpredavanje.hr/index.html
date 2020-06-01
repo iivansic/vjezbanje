@@ -1,18 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vjezbapredpredavanje</title>
-</head>
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="assets/css/foundation.css">
+  </head>
 <body>
-    <H1>DOBRO DOŠLI LJUDOVI</H1>
+    <!-- centriranje forme -->
+    <table class="center" width="500" border="0" align="center" cellspacing="2" bordercolor="#000000" bgcolor="#FFCC66">
+        <tr>
+            <br>
+            <td align="center">
+    <div class="row">
+        <fieldset class="small-12 large-6 columns">
+    <label> Ime osobe:
+        <br>
+        <br>
+        <!--te jebo kako poravnat po sredini-->
+        <select>
+          <option value=""></option>
+          <option value="Ivan Ivanšić">Ivan Ivanšić</option>
+          <option value="Zvonko Bukna">Zvonko Bukna</option>
+          <option value="Ladislav Kurbanović">Ladislav Kurbanović</option>
+          <option value="Stjepan Matanović">Stjepan Matanović</option>
+        </select>
 
-    <iframe width="1280" height="720"src="https://www.youtube.com/embed/PVZWI5yJKuw"></iframe>
-    <body style="margin: 0px; background: #aaa9bb;"><img style="-webkit-user-select: none;margin: auto;">
- 
+        <br>
+        <br>
+      </label>
+      <!-- imputboxovi -->
+    <label>
+        Kataloški broj pozicije:
+        <br>
+        <input style="text-align: center;" type="text">
+        <br>
+        <br>
+        Količina izrađene pozicije:
+        <br>
+        <input  style="text-align: center;" type="Number" value="">
+      </label>
+      <br>
+      <br>
+      <!-- option butoni -->
+      <form>
+            <legend>Odaberi laser</legend>
+            <input type="radio" name="Laser" value="Laser1" id="Laser1" required><label for="Laser1">Laser1</label>
+            <input type="radio" name="Laser" value="Laser2" id="Laser2"><label for="Laser2">Laser2</label>
+            <input type="radio" name="Laser" value="Laser3" id="Laser3"><label for="Laser3">Laser3</label>
+          </fieldset>
+        </div>
+      </form>
+<br>
+<!-- tipkice -->
+<div class="button">
+<button class="button" type="button" class="success button">Unos</button>
+<button type="button" class="alert button">Reset</button>
+</div>
+</td>
+</tr>
+</table>  
+
+<br>
+<br>
 
 
 
+
+
+
+
+
+
+<script src="assets/js/vendor.js"></script>
+<script src="assets/js/foundation.js"></script>
+<script src="assets/js/app.js"></script>
 </body>
 </html>

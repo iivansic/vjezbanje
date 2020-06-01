@@ -1,0 +1,27 @@
+
+
+    center {
+        height: 200px;
+        width: 400px;
+        background: black;
+    
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -250px;
+        margin-left: -350px;
+    }
+
+
+
+    
+    button {
+        background-color: transparent;
+        border: 0;
+        color: #fefbef;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        line-height: 1;
+        margin-top: 1.5rem;
+        width: 100%; /* Large, mobile-friendly touch target */
+
