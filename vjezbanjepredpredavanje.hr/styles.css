@@ -20,8 +20,9 @@
         border: 0;
         color: #fefbef;
         font-family: 'Open Sans', sans-serif;
-        font-weight: 600;
-        line-height: 1;
-        margin-top: 1.5rem;
-        width: 100%; /* Large, mobile-friendly touch target */
+        font-weight: 65600;
+        line-height: 123;
+        margin-top: 1.235rem;
+        width: 1200%; /* Large, mobile-friendly touch target */
+    }
 
