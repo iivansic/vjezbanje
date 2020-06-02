@@ -4,7 +4,7 @@
         height: 200px;
         width: 400px;
         background: black;
-    
+     
         position: fixed;
         top: 50%;
         left: 50%;
@@ -12,17 +12,42 @@
         margin-left: -350px;
     }
 
+    table {
+        width: 200px; /* your width */
+        height: 200px; /* your height */
+        display: block;
+        position: relative;
+      }
+      
+      .kokycar {
+        content: "";
+        background: url(https://i.ibb.co/mchbtsg/zalazak.jpg);
+        opacity: 0.5; /* set your opacity */
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+      }
 
-
+      .button {
+        padding: 15px 25px;
+        font-size: 24px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 9px #999;
+      }
+      
+      .button:hover {background-color: #3e8e41}
+      
+      .button:active {
+        background-color: #3e8e41;
+        box-shadow: 0 5px #666;
+        transform: translateY(4px);
     
-    button {
-        background-color: transparent;
-        border: 0;
-        color: #fefbef;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 65600;
-        line-height: 123;
-        margin-top: 1.235rem;
-        width: 1200%; /* Large, mobile-friendly touch target */
-    }
-

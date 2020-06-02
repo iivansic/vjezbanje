@@ -9,16 +9,68 @@
     <link rel="stylesheet" href="assets/css/foundation.css">
   </head>
   <style>
-      
+  .kokycar {
+        content: "";
+        background: url(https://i.ibb.co/mchbtsg/zalazak.jpg);
+        opacity: 0.5; /* set your opacity */
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;   
+      }
+
+
+.button {
+  padding: 11px 20px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background-color: rgb(73, 75, 85);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+    body, html {
+  height: 100%;
+  margin: 0;
+}
+      .pozadina {
+  /* The image used */
+  background-image:   url("https://i.ibb.co/F6Gh0ZP/background-slika.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
   </style>
 <body>
+  <div class="pozadina">
     <!-- centriranje forme -->
-    <table class="center" width="500" border="0" align="center" cellspacing="2" bordercolor="#000000" bgcolor="#FFCC66">
-        <tr>
+    <table class="center" width="30%" border="1" align="center" cellspacing="5" bordercolor="#000000" bgcolor=grey>
+     <div>  
+      <tr>
             <br>
             <td align="center">
     <div class="row">
         <fieldset class="small-12 large-6 columns">
+          <h3>Prozor za knjiženje</h3>
     <label> Ime osobe:
         <br>
         <!--te jebo kako poravnat po sredini-->
@@ -42,7 +94,7 @@
         <br>
         Količina izrađene pozicije:
         <br>
-        <input  style="text-align: center;" type="Number" value="">
+        <input  style="text-align: center;" type="number" value="">
       </label>
       <br>
       <br>
@@ -55,19 +107,19 @@
           </fieldset>
         </div>
       </form>
-<br>
+
 <!-- tipkice -->
 
-<button type="button" class="success button">Unos</button>
-<button type="button" class="alert button">Reset</button>
+<button type="submit" class="button">Unos</button>
 </td>
 </tr>
 </table>  
-
 <br>
 <br>
-
-
+<br>
+<br>
+</div> 
+</div>
 
 
 
