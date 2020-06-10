@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+h1, address, span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+
+</style>
 <body style="width:100%">
 <?php
 // zadatak2.php
@@ -19,8 +28,8 @@ $j=$_GET['adresa'];
 $k=$_GET['mjesto'];
 
 
-echo '<h1 style="text-align:left;float:left;">', $i, '</h1>',
-'<address style="text-align:left;float:left;">',"&nbsp&nbsp"  , $j,  '</address>',
+echo '<h1 style="text-align:left;float:">', $i, '</h1>',
+'<address> ',"&nbsp&nbsp"  , $j,  '</address>',
 '<span style="clear:both;">', "&nbsp&nbsp"  ,  $k , '</span>';
 echo '<br>';
 echo '<br>';
