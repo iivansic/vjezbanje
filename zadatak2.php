@@ -6,55 +6,49 @@
     <title>Document</title>
 </head>
 <style>
-h1, address, span {
+h1, address, span, h3 {
   display: inline-block;
   vertical-align: middle;
 }
-
-
-
 </style>
-<body style="width:100%">
+<body style="width:100%; background-color:pink;">
+<form method="_GET">
+Ime: <input type="text" name="ime" required>
+Adresa: <input type="text" name="adresa" required>
+Mjesto: <input  type="text" name="mjesto" required><br> 
+<br>
+<input type="submit">
+<input type="reset">
+
+</form>
+Ispuni formu te kad završiš pritisni pošalji (ne mora se tipkati u browser na ovaj način).
+<br>
 <?php
-// zadatak2.php
-// stranica prima tri parametra pod ključevima
-// naziv, adresa i mjesto. Program označava vrijednost pod
-// nazivom s h1 oznakom, vrijednost adresa s address oznakom
-// te vrijednost mjesto s span oznakom.
-// sve tri vrijednosti prikazane su vizualno jedne pokraj drugih
-// https://polaznikXX.edunova.hr/zadatak1.php?b1=2&b2=3
-$i=$_GET['naziv'];
+error_reporting(E_ALL & ~E_NOTICE);
+$i=$_GET['ime'];
 $j=$_GET['adresa'];
 $k=$_GET['mjesto'];
-
-
-echo '<h1 style="text-align:left;float:">', 'Naziv: ', $i, '</h1>',
+if ($i=="" or $j=="" or $k=="") {
+    echo '<h1>Pozdrav molio bih te da ispuniš polja!</h1>';
+    goto preskocisve;
+}
+echo '<h1 style="text-align:left;float:">', 'Ime: ', $i, '</h1>',
 '<address style="font-size:33px;"> ',"&nbsp&nbsp"  ,'Adresa: ', $j,  '</address>',
 '<span style="font-size:33px;">', "&nbsp&nbsp", 'Mjesto: ' ,  $k , '</span>';
 echo '<br>';
+echo '<h3>Ti se zoveš', "&nbsp", $i, '</h3>,',"&nbsp",
+'<h3>nalaziš se na adresi: ', $j,'</h3>,', "&nbsp",'<h3>iz mjesta: ',  $k,'.</h3>';
+preskocisve:
+error_reporting(-1);
 echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-echo '<br>';
-
-echo '<h3>mislim da sam tek sad skonto šta je zadatak od mene trazio, ak vidite ovo ja sam nešt zabrijao
-    da je potrebno labele metnit u ove oznake h1 span itd a vrijednosti obično :D 
-</h3>';
-
-
-
-
+echo '<img src="https://picsum.photos/201/200">';
+echo '<img src="https://picsum.photos/202/200">';
+echo '<img src="https://picsum.photos/203/200">';
+echo '<img src="https://picsum.photos/204/200">';
 ?>
-
+<br><br><br><br><br><br><br><br><br><br><br> <address>made by Ivanšić</address> 
   <?php echo $_SERVER['SERVER_ADDR'];
- 
-    
     ?>
-
-
-
 </body>
 </html>
 
