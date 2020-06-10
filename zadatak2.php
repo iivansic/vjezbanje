@@ -28,9 +28,9 @@ $j=$_GET['adresa'];
 $k=$_GET['mjesto'];
 
 
-echo '<h1 style="text-align:left;float:">', $i, '</h1>',
-'<address> ',"&nbsp&nbsp"  , $j,  '</address>',
-'<span style="clear:both;">', "&nbsp&nbsp"  ,  $k , '</span>';
+echo '<h1 style="text-align:left;float:">', 'Naziv: ', $i, '</h1>',
+'<address style="font-size:33px;"> ',"&nbsp&nbsp"  ,'Adresa: ', $j,  '</address>',
+'<span style="font-size:33px;">', "&nbsp&nbsp", 'Mjesto: ' ,  $k , '</span>';
 echo '<br>';
 echo '<br>';
 echo '<br>';
