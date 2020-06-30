@@ -39,17 +39,18 @@ echo '<br>','<b>','Odgovor:','</b>','<br>', 'Površina pravokutnika od odabrane 
 // Zadatak 3
 // Kreirajte funkciju koja vraca indeksni niz od 10 slucajnih brojeva izmedu 1 i 10
 echo '<hr/>','<b>','Zadatak 3.','</b>', '<br>', 'Kreirajte funkciju koja vraca indeksni niz od 10 slucajnih brojeva izmedu 1 i 10';
-echo '<br>','<b>','Odgovor:';
-/* nije dobro riješen
-function indeksniniz(){
-    $niz[];
+echo '<br>','<b>','Odgovor:','<br>';
+
+function nizbrojeva(){
+    $niz=[];
     for ($i=0;$i<10;$i++){
         $niz[]= rand(1,10);
     }
     return $niz;
 }
-echo indeksniniz();
-*/
+
+print_r(nizbrojeva());
+
 // Zadatak 4
 //kreirajte funkciju koja prima dva broja i vraca njihov zbroj
 echo '<hr/>','<b>','Zadatak 4.','</b>', '<br>', 'Kreirajte funkciju koja prima dva broja i vraca njihov zbroj';
